@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Encuesta</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="../../../../global_assets/js/main/jquery.min.js"></script>
+	<script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
+	<!-- /core JS files -->
+	
+	
+
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/widgets_stats.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/streamgraph.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/sparklines.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/lines.js"></script>	
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/areas.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/donuts.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/bars.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/progress.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/heatmaps.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/pies.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/bullets.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_extension_fixed_columns.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
+	
+	
+	
+	<!-- /theme JS files -->
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/tables/datatables/extensions/fixed_columns.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	
+
+	
+
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switch.min.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/invoice_grid.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/content_cards_footer.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/components_collapsible.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/components_modals.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/components_popups.js"></script>
+	
+	<script src="../../../../global_assets/js/plugins/visualization/echarts/echarts.min.js"></script>
+	
+	<script src="../../../../global_assets/js/demo_charts/echarts/light/lines/encuesta1.js"></script>
+	
+	<script src="../../../../global_assets/js/demo_charts/echarts/light/lines/encuesta2.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/echarts/light/bars/rategain1.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/echarts/light/bars/rategain2.js"></script>
+	<script src="../../../../global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/extensions/jquery_ui/touch.min.js"></script>
+	<script>
+	//Inicializamos el tooltip
+$("#ejemplo").tooltip();
+
+	
+	</script>
+	
+	<style>
+	.dataTable thead .sorting:after, .dataTable thead .sorting:before, .dataTable thead .sorting_asc:after, .dataTable thead .sorting_asc_disabled:after, .dataTable thead .sorting_desc:after, .dataTable thead .sorting_desc_disabled:after {
+    content: '';
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    font-size: .75rem;
+    margin-top: 0px;
+    display: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ .popover { white-space: pre-wrap; } 
+	
+	</style>
+	
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-embed"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-embed"></i>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav ">
+				
+
+				<li class="nav-item dropdown ml-md-3">
+			<!-- <span class="navbar-text ml-md-3"> -->
+			<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+				
+				Sucursal Bariloche
+			<!-- </span> -->
+			</a>
+			<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-body p-2">
+							<div class="row no-gutters">
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Salta</div>
+									</a>
+
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Cordoba</div>
+									</a>
+								</div>
+								
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Bahia Blanca</div>
+									</a>
+
+									
+								</div>
+
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Rosario</div>
+									</a>
+
+									<!-- <a href="#" class="d-block text-default text-center ripple-dark rounded p-3"> -->
+										<!-- <i class="icon-youtube text-danger icon-2x"></i> -->
+										<!-- <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Youtube</div> -->
+									<!-- </a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					</li>
+					</ul>
+
+			<ul class="navbar-nav ml-md-auto">
+				
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-bell3 mr-2"></i>
+						Notificaciones
+					</a>
+					
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-size-sm line-height-sm text-uppercase font-weight-semibold">Ultimas Notificaciones</span>
+							<a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-warning-400 rounded-round btn-icon"><i class="icon-warning22"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">!Mantenimiento</a> El vehiculo KWID 5P con pase a chile con patente debe entrar en mantenimiento el dia 2020-03-10 a las 10:00:00
+										<div class="font-size-sm text-muted mt-1">Hace 4 minutos <span class="badge badge-grey"><i class="icon-checkmark2"></i>Marcar como Leída</span></div>
+									</div>
+								</li>
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-blue rounded-round btn-icon"><i class="icon-undo"></i></a>
+									</div>
+									
+									<div class="media-body">
+										<a href="#">Devoluciones</a> Hay 3 devoluciones pendientes
+										<div class="font-size-sm text-muted mt-1">Hace 1 minuto <span class="badge badge-grey"><i class="icon-checkmark2"></i>Marcar como Leída</span></div>
+									</div>
+								</li>
+
+								
+							</ul>
+						</div>
+
+						<!-- <div class="dropdown-content-footer bg-light"> -->
+							
+							<!-- <div> -->
+								<!-- <a href="#" class="text-grey" data-popup="tooltip" title="Limpiar Lista"><i class="icon-checkmark3"></i></a> -->
+								
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link">
+						<i class="icon-switch2"></i>
+						<span class="d-md-none ml-2">Cerrar Sesión</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				<span class="font-weight-semibold"></span>
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user-material">
+					<div class="sidebar-user-material-body">
+						<div class="card-body text-center">
+							<a href="#">
+								<img src="../../../../global_assets/images/placeholders/placeholder.png" class="img-fluid rounded-circle  mb-3" width="80" height="80" alt="">
+							</a>
+							
+						</div>
+													
+						<div class="sidebar-user-material-footer">
+							<a href="#user-nav" class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle" data-toggle="collapse"><span></span></a>
+						</div>
+					</div>
+
+					<div class="collapse" id="user-nav">
+						<ul class="nav nav-sidebar">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="icon-user-plus"></i>
+									<span>Perfil de Empresa</span>
+								</a>
+							</li>
+							
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="icon-cog5"></i>
+									<span>Configuración</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="icon-switch2"></i>
+									<span>Cerrar Sesión</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Main -->
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Menu</div> <i class="icon-menu" title="Menu"></i></li>
+						
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-home4"></i> <span>Inicio</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Inicio">
+								<li class="nav-item"><a href="#" class="nav-link ">Grilla de Adicionales</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Administracion de Usuarios</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Grilla de Reservas</a></li>
+								
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-cog2"></i> <span>Administrativo</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Administrativo">
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Datos Administrativos</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Feriados</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Situaciones</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Categorias</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Vehiculos</a></li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Adicionales</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Adicionales por Sede</a></li>
+										
+									</ul>
+								</li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Dashboard</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Ocupacion</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Tiempo</a></li>
+									</ul>
+								</li>
+								
+								
+								
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-wallet"></i> <span>Comercial</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Comercial">
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Reservas</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Listado de Reservas</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Alta de Reservas</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Clientes</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Listado de Clientes</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Nuevo Cliente</a></li>
+									</ul>
+								</li>
+								
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Cotizaciones</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Listado de Cotizaciones</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Generar Cotizacion</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Tarifas</a>
+									<ul class="nav nav-group-sub">
+										
+										<li class="nav-item nav-item-submenu">
+											<a href="#" class="nav-link"> Temporadas</a>
+											<ul class="nav nav-group-sub">
+												<li class="nav-item"><a href="#" class="nav-link"> Nueva Temporada</a></li>
+												<li class="nav-item"><a href="#" class="nav-link"> Asignar Temporada</a></li>
+											</ul>
+										</li>
+										<li class="nav-item"><a href="#" class="nav-link"> Tarifas Alquileres</a></li>
+										<li class="nav-item"><a href="#" class="nav-link"> Aeropuertos</a></li>
+										<li class="nav-item"><a href="#" class="nav-link"> Dropoff</a></li>
+										
+									</ul>
+								</li>
+								
+								<li class="nav-item"><a href="#" class="nav-link">Encuestas</a></li>
+								
+							</ul>
+						</li>
+						
+						
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-car"></i> <span>Operaciones</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Operaciones">
+								<li class="nav-item"><a href="#" class="nav-link">Impresion de Contratos</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Entrega y Devolucion</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Nota del Auto</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Listado de Multas</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Listado del Proximo Service</a></li>
+								
+							</ul>
+						</li>
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">MPS ®2020</div> </li>
+
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Encuestas</span> </h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="d-flex justify-content-center">
+							<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
+								<i class="icon-user-plus text-pink-300" title="Nuevo Cliente"></i>
+								<span></span>
+							</a>
+							<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
+								<i class="icon-file-plus2 text-pink-300" title="Nueva Reserva"></i>
+								<span></span>
+							</a>
+							<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
+								<i class="icon-cash3 text-pink-300" title="Cotización"></i>
+								<span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<div class="breadcrumb">
+							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Inicio</a>
+							<a href="#" class="breadcrumb-item"><span class="breadcrumb-item ">Encuestas</span></a>
+							
+						</div>
+
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							
+
+							<div class="breadcrumb-elements-item dropdown p-0">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+				<!-- Complex headers example -->
+				
+	<div class="text-left mb-3 ">
+	<div class="row">
+	<div class="col-md-6">
+	<h3>Período: <button type="button" class="btn btn-success btn-labeled btn-labeled-left " data-toggle="modal" data-target="#modal_nuevo"><b><i class="icon-alarm"></i></b> Actual (3 meses)</button>&nbsp;</h3>
+	</div>
+	<div class="col-md-6">
+	<h3>Encuestas: <span class="badge badge-primary">200</span></h3>
+	</div>
+</div>	
+</div>
+			<div class="row">
+				<div class="col-md-6">
+			<div class="card card-body border-top-1 border-top-primary">
+							<div class="text-left">
+								<h6 class="mb-0 font-weight-semibold">Calificación General</h6>
+								
+							</div>
+
+							<div class="progress mb-3">
+								<div class="progress-bar bg-teal" style="width: 75%">
+									<span>7.65</span>
+								</div>
+							</div>
+							<div class="text-left">
+								<h6 class="mb-0 font-weight-semibold">Estado del Auto</h6>
+								
+							</div>
+
+							<div class="progress mb-3">
+								<div class="progress-bar bg-teal" style="width: 69%">
+									<span>6.96</span>
+								</div>
+							</div>
+							<div class="text-left">
+								<h6 class="mb-0 font-weight-semibold">Relación calidad precio</h6>
+								
+							</div>
+
+							<div class="progress mb-3">
+								<div class="progress-bar bg-teal" style="width: 75%">
+									<span>7.59</span>
+								</div>
+							</div>
+			</div>
+						
+						</div>	
+						
+						<div class="col-md-6">
+			<div class="card card-body border-top-1 border-top-primary">
+							<div class="text-left">
+								<h6 class="mb-0 font-weight-semibold">AT. Personal</h6>
+								
+							</div>
+
+							<div class="progress mb-3">
+								<div class="progress-bar bg-teal" style="width: 81%">
+									<span>8.17</span>
+								</div>
+							</div>
+							<div class="text-left">
+								<h6 class="mb-0 font-weight-semibold">Limpieza</h6>
+								
+							</div>
+
+							<div class="progress mb-3">
+								<div class="progress-bar bg-teal" style="width: 73%">
+									<span>7.37</span>
+								</div>
+							</div>
+							<div class="text-left">
+								<h6 class="mb-0 font-weight-semibold">Tiempo (E y D)</h6>
+								
+							</div>
+
+							<div class="progress mb-3">
+								<div class="progress-bar bg-teal" style="width: 77%">
+									<span>7.71</span>
+								</div>
+							</div>
+			</div>
+						
+						</div>	
+			</div>
+			
+			
+			<div class="row">
+<div class="col-md-12">
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Evolución de calidad (2019 - 2020)</h5>
+						
+					</div>
+
+					<div class="card-body">
+						<div class="chart-container">
+							<div class="chart has-fixed-height" id="rategain2"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<!-- <div class="col-md-6"> -->
+				<!-- <div class="card"> -->
+					<!-- <div class="card-header header-elements-inline"> -->
+						<!-- <h5 class="card-title">&nbsp;</h5> -->
+						
+					<!-- </div> -->
+
+					<!-- <div class="card-body"> -->
+						<!-- <div class="chart-container"> -->
+							<!-- <div class="chart has-fixed-height" id="rategain2"></div> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div> -->
+				
+				
+				<!-- </div> -->
+				</div>
+
+
+
+
+
+
+				<div class="card">
+				<div class="col-md-12 " style="margin-top: 10px;">
+				<div class="row mb-3">
+				<div class="col-sm-4 col-xl-2">
+						
+							<h6 class="mb-0 font-weight-semibold">Referencias <i class="icon-arrow-right7"></i></h6>
+
+							
+						
+					</div>
+				<div class="col-sm-4 col-xl-2">
+						
+							<div class="bg-danger-800 text-center "><span>Menos de 6</span></div>
+
+							
+						
+					</div>
+					
+					<div class="col-sm-4 col-xl-2">
+						
+							<div class="bg-orange-800 text-center "><span>6 a 7</span></div>
+
+							
+						
+					</div>
+					<div class="col-sm-4 col-xl-2">
+						
+							<div class="bg-orange-300 text-center "><span>7 a 8</span></div>
+
+							
+						
+					</div>
+					<div class="col-sm-4 col-xl-2">
+						
+							<div class="bg-green-800 text-center "><span>8 a 9</span></div>
+
+							
+						
+					</div>
+					<div class="col-sm-4 col-xl-2">
+						
+							<div class="bg-green-400 text-center "><span>9 a 10</span></div>
+
+							
+						
+					</div>
+					
+				
+				</div>
+				<div class="text-left mb-3 ">
+	
+	 <button type="button" class="btn btn-outline bg-slate text-slate border-slate legitRipple" data-toggle="modal" data-target="#modal_nuevo"><b><i class="icon-download"></i></b> Descargar (.xls)</button>&nbsp;	
+</div>
+					</div>
+				
+					<div class="responsive-table">
+					<table class="table datatable-basic table-hover table-bordered table-striped" >
+						<thead>
+							
+					        <tr>
+					        	
+					            <th style="font-size: 0.9em; padding:5px; ">Contrato</th>
+					            <th style="font-size: 0.9em; padding:5px;">Fecha </br> Desde</th>
+								 <th style="font-size: 0.9em; padding:5px;">Fecha </br>Hasta</th>
+								  <th style="font-size: 0.9em;padding:5px; ">Patente</th>
+					            <th style="font-size: 0.9em; padding:5px;">Calificaión</br>Gral</th>
+					            <th style="font-size: 0.9em;padding:5px;">Atención del</br>Personal</th>
+					            <th style="font-size: 0.9em;padding:5px;">Estado del </br> auto</th>
+					            <th style="font-size: 0.9em;padding:5px;">Limpieza</th>
+					            <th style="font-size: 0.9em;padding:5px;">Relación</br>Calidad</br>Precio</th>
+								<th style="font-size: 0.9em;padding:5px;">Tiempo</br>(E y D)</th>
+								<th style="font-size: 0.9em;padding:5px;">Volvería</br>alquilar</th>
+								<th style="font-size: 0.9em;padding:5px;">Coment</br>Positivos</th>
+								<th style="font-size: 0.9em;padding:5px;">Qué </br>mejorar</th>
+								<th style="font-size: 0.9em;padding:5px;">Sede</th>
+								
+							
+								
+								
+								
+								
+					        </tr>
+					    </thead>
+					    <tbody>
+					       
+					       
+					      
+					       
+					        
+					        <tr>
+					           
+					           
+					           <td style="font-size: 0.85em; ">45768  </td>
+					           <td style="font-size: 0.85em; ">10/09/2020</td>
+							     <td style="font-size: 0.85em; ">10/09/2020</td>
+								   <td style="font-size: 0.85em; ">AB456GT</td>
+							     <td class="bg-orange-300 text-center " style="font-size: 0.85em; ">7</td>
+					           <td class="bg-green-400 text-center " style="font-size: 0.85em; ">9</td>
+				                
+							<td class="bg-orange-300 text-center " style="font-size: 0.85em;">7</td>
+							<td class="bg-green-800 text-center " style="font-size: 0.85em;">8</td>
+							<td class="bg-danger-800 text-center " style="font-size: 0.85em;">5</td>
+							<td class="bg-orange-800 text-center " style="font-size: 0.85em;">6</td>
+							<td style="font-size: 0.85em;"><span class="badge badge-success">SI</span></td>
+					           <td style="font-size: 0.85em;"><button  type="button" class=" btn bg-primary-400 btn-sm btn-icon rounded-round legitRipple " data-popup="popover-custom" title="" data-trigger="focus" data-html="true" data-placement="left" data-content="La atención fue excelente, el auto fue entregado en perfectas condiciones, el web check in fue muy rápido y la entrega sólo tomo unos minutos" data-original-title="Carlos Perez dijo:" aria-describedby="popover1782"> <i class="icon-eye"></i></button></td>
+					           <td style="font-size: 0.85em; "><button  type="button" class=" btn bg-primary-400 btn-sm btn-icon rounded-round legitRipple " data-popup="popover-custom" title="" data-trigger="focus" data-html="true" data-placement="left" data-content="Mejorar la atención de Julian jeje" data-original-title="Carlos Perez dijo:" aria-describedby="popover1782"> <i class="icon-eye"></i></button></td>
+							<td style="font-size: 0.85em; ">Bariloche</td>							   
+					        </tr>
+							
+							
+							 <tr>
+					           
+					           
+					           <td style="font-size: 0.85em; ">59787 </td>
+ <td style="font-size: 0.85em; ">10/09/2020</td>
+							     <td style="font-size: 0.85em; ">10/09/2020</td>
+								   <td style="font-size: 0.85em; ">AB456GT</td>
+					           <td class="bg-danger-800 text-center " style="font-size: 0.85em; ">6</td>
+					           <td class="bg-green-800 text-center " style="font-size: 0.85em; ">8</td>
+				                
+							<td class="bg-orange-300 text-center " style="font-size: 0.85em;">7</td>
+							<td class="bg-danger-800 text-center " style="font-size: 0.85em;">6</td>
+							<td class="bg-danger-800 text-center " style="font-size: 0.85em;">5</td>
+							<td class="bg-danger-800 text-center " style="font-size: 0.85em;">6</td>
+							<td style="font-size: 0.85em;"><span class="badge badge-danger">NO</span></td>
+					           <td style="font-size: 0.85em;"><button  type="button" class=" btn bg-primary-400 btn-sm btn-icon rounded-round legitRipple " data-popup="popover-custom" title="" data-trigger="focus" data-html="true" data-placement="left" data-content="Limpieza pesima, producto caro y tardanza en la entrega y devolución" data-original-title="Monica Rodriguez dijo:" aria-describedby="popover1782"> <i class="icon-eye"></i></button></td>
+					           <td style="font-size: 0.85em; "><button  type="button" class=" btn bg-primary-400 btn-sm btn-icon rounded-round legitRipple " data-popup="popover-custom" title="" data-trigger="focus" data-html="true" data-placement="left" data-content="Todo" data-original-title="Monica Rodriguez dijo:" aria-describedby="popover1782"> <i class="icon-eye"></i></button></td>
+							<td style="font-size: 0.85em; ">Bariloche</td>							   
+					        </tr>
+					       
+					       
+					       
+					       
+					      
+					       
+					    </tbody>
+					</table>
+				</div>
+				</div>
+				<!-- /complex headers example -->
+
+			</div>
+			<!-- /content area -->
+
+				
+				<!-- Primary modal -->
+				<div id="modal_nuevo" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header bg-light">
+								<h6 class="modal-title">Seleccionar Período</h6>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<div class="card-body">
+							
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="font-weight-bold">Fecha desde</label>
+										<input class="form-control" type="date" name="date">
+									</div>
+								<div class="form-group">
+										<label class="font-weight-bold">Fecha hasta</label>
+										<input class="form-control" type="date" name="date">
+									</div>	
+
+								
+
+								
+											
+														
+								</div>
+								
+							
+								
+								
+								</div>
+											
+
+						<div class="row">
+								<div class="col-md-12 text-right mb-3 py-2">
+									<button type="button" class="btn btn-success btn-sm legitRipple "> Seleccionar</button>&nbsp;
+		                    	<button type="button" class="btn btn-danger btn-sm legitRipple"> Cancelar</button>
+									</div>
+									</div>
+
+							
+						</div>
+							</div>
+
+							
+						</div>
+					</div>
+				</div>
+				<!-- /primary modal -->
+				
+				<!-- Primary modal -->
+				<div id="modal_programar" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-header bg-light">
+								<h6 class="modal-title">Nuevo Service</h6>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<div class="card-body">
+							
+							<div class="row">
+								<div class="col-md-12">
+								<div class="form-group">
+										<label class="font-weight-bold">Seleccionar vehículo</label>
+										<select class="form-control select bg-light">
+										
+											<option value="">VW Gol</option>
+											<option value="">Chevrolet Spin</option>
+											
+										
+									</select>
+									</div>
+									<div class="row">
+									<div class="col-md-6">
+								<div class="form-group">
+										<label class="font-weight-bold">Fecha desde</label>
+										<input class="form-control" type="date" name="date">
+									</div>	
+									</div>	
+									
+									<div class="col-md-6">
+									<div class="form-group">
+										<label class="font-weight-bold">Hora desde</label>
+										<input class="form-control" type="date" name="date">
+									</div>	
+									</div>
+								<div class="col-md-6">
+								<div class="form-group">
+										<label class="font-weight-bold">Fecha hasta</label>
+										<input class="form-control" type="date" name="date">
+									</div>	
+									</div>	
+									
+									<div class="col-md-6">
+									<div class="form-group">
+										<label class="font-weight-bold">Hora hasta</label>
+										<input class="form-control" type="date" name="date">
+									</div>	
+									</div>
+									</div>			
+
+								<div class="form-group">
+										<label class="font-weight-bold">Tipo de Service</label>
+										<select class="form-control select bg-light">
+										
+											<option value="">70.000</option>
+											<option value="">80.000</option>
+											
+										
+									</select>
+									</div>
+
+								
+											
+														
+								</div>
+								
+							
+								
+								
+								</div>
+											
+
+						<div class="row">
+								<div class="col-md-12 text-right mb-3 py-2">
+									<button type="button" class="btn btn-success btn-sm legitRipple "> Guardar</button>&nbsp;
+		                    	<button type="button" class="btn btn-danger btn-sm legitRipple"> Cancelar</button>
+									</div>
+									</div>
+
+							
+						</div>
+							</div>
+
+							
+						</div>
+					</div>
+				</div>
+				<!-- /primary modal -->
+
+			
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+	
+	
+</body>
+</html>

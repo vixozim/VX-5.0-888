@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>RateGain</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/responsive-calendar.css" rel="stylesheet" type="text/css"></link>
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="../../../../global_assets/js/main/jquery.min.js"></script>
+	<script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
+	<!-- /core JS files -->
+	
+	
+
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<!-- /theme JS files -->
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/tables/datatables/extensions/fixed_columns.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/widgets_stats.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/streamgraph.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/sparklines.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/lines.js"></script>	
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/areas.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/donuts.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/bars.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/progress.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/heatmaps.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/pies.js"></script>
+	<script src="../../../../global_assets/js/demo_charts/pages/dashboard/light/bullets.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+		<script src="../../../../global_assets/js/demo_pages/fullcalendar_styling2.js"></script>
+			
+	<script src="assets/js/responsive-calendar.js"></script>
+	
+	
+	<!-- /theme JS files -->
+	
+	<script src="../../../../global_assets/js/plugins/ui/fullcalendar/core/main.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/fullcalendar/daygrid/main.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/fullcalendar/timegrid/main.min.js"></script>
+	
+	
+	<script src="../../../../global_assets/js/plugins/visualization/echarts/echarts.min.js"></script>
+	
+	
+	
+	<script src="../../../../global_assets/js/demo_charts/echarts/light/bars/rategain.js"></script>
+	<script src="../../../../global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/extensions/jquery_ui/touch.min.js"></script>
+	
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switch.min.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/invoice_grid.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/content_cards_footer.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/components_collapsible.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/components_modals.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_advanced.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
+<style>			
+			.r {} 
+		.responsive-calendar .day.ALTA {  
+		background-color: #847;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.VERANO {  
+		background-color: #F90;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.BAJA {  
+		background-color: #008000;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.INVIERNO {  
+		background-color: #0000ff;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.Promocional {  
+		background-color: #c0c0c0;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.FEBRERO {  
+		background-color: #00ff00;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.SUPER {  
+		background-color: #ff8080;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.FIESTAS {  
+		background-color: #eb141a;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.carnaval {  
+		background-color: #9ed3fe;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.pretemporada {  
+		background-color: #e901ef;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.PromociónKmIlimitados {  
+		background-color: #ffff6f;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.SEMANASANTA {  
+		background-color: #80ff00;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.1°demayo {  
+		background-color: #6c006c;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.SUPERBAJA {  
+		background-color: #8000ff;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.semanabaja {  
+		background-color: #000000;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.MARZO {  
+		background-color: #000000;
+		color: #FF0000;
+	}			
+	  
+	
+   		
+			.r {} 
+		.responsive-calendar .day.ALTA {  
+		background-color: #847;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.VERANO {  
+		background-color: #F90;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.BAJA {  
+		background-color: #008000;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.INVIERNO {  
+		background-color: #0000ff;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.Promocional {  
+		background-color: #c0c0c0;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.FEBRERO {  
+		background-color: #00ff00;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.SUPER {  
+		background-color: #ff8080;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.FIESTAS {  
+		background-color: #eb141a;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.carnaval {  
+		background-color: #9ed3fe;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.pretemporada {  
+		background-color: #e901ef;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.PromociónKmIlimitados {  
+		background-color: #ffff6f;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.SEMANASANTA {  
+		background-color: #80ff00;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.1°demayo {  
+		background-color: #6c006c;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.SUPERBAJA {  
+		background-color: #8000ff;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.semanabaja {  
+		background-color: #000000;
+		color: #FF0000;
+	}			
+			.r {} 
+		.responsive-calendar .day.MARZO {  
+		background-color: #000000;
+		color: #FF0000;
+	}			
+	  
+	 
+	
+    </style>
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-embed"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-embed"></i>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav ">
+				
+
+				<li class="nav-item dropdown ml-md-3">
+			<!-- <span class="navbar-text ml-md-3"> -->
+			<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+				
+				Sucursal Bariloche
+			<!-- </span> -->
+			</a>
+			<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-body p-2">
+							<div class="row no-gutters">
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Salta</div>
+									</a>
+
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Cordoba</div>
+									</a>
+								</div>
+								
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Bahia Blanca</div>
+									</a>
+
+									
+								</div>
+
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-home4"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Rosario</div>
+									</a>
+
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					</li>
+					</ul>
+
+			<ul class="navbar-nav ml-md-auto">
+				
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-bell3 mr-2"></i>
+						Notificaciones
+					</a>
+					
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-size-sm line-height-sm text-uppercase font-weight-semibold">Ultimas Notificaciones</span>
+							<a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-warning-400 rounded-round btn-icon"><i class="icon-warning22"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">!Mantenimiento</a> El vehiculo KWID 5P con pase a chile con patente debe entrar en mantenimiento el dia 2020-03-10 a las 10:00:00
+										<div class="font-size-sm text-muted mt-1">Hace 4 minutos <span class="badge badge-grey"><i class="icon-checkmark2"></i>Marcar como Leída</span></div>
+									</div>
+								</li>
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-blue rounded-round btn-icon"><i class="icon-undo"></i></a>
+									</div>
+									
+									<div class="media-body">
+										<a href="#">Devoluciones</a> Hay 3 devoluciones pendientes
+										<div class="font-size-sm text-muted mt-1">Hace 1 minuto <span class="badge badge-grey"><i class="icon-checkmark2"></i>Marcar como Leída</span></div>
+									</div>
+								</li>
+
+								
+							</ul>
+						</div>
+
+						<!-- <div class="dropdown-content-footer bg-light"> -->
+							
+							<!-- <div> -->
+								<!-- <a href="#" class="text-grey" data-popup="tooltip" title="Limpiar Lista"><i class="icon-checkmark3"></i></a> -->
+								
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link">
+						<i class="icon-switch2"></i>
+						<span class="d-md-none ml-2">Cerrar Sesión</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				<span class="font-weight-semibold"></span>
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user-material">
+					<div class="sidebar-user-material-body">
+						<div class="card-body text-center">
+							<a href="#">
+								<img src="../../../../global_assets/images/placeholders/placeholder.png" class="img-fluid rounded-circle  mb-3" width="80" height="80" alt="">
+							</a>
+							
+						</div>
+													
+						<div class="sidebar-user-material-footer">
+							<a href="#user-nav" class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle" data-toggle="collapse"><span></span></a>
+						</div>
+					</div>
+
+					<div class="collapse" id="user-nav">
+						<ul class="nav nav-sidebar">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="icon-user-plus"></i>
+									<span>Perfil de Empresa</span>
+								</a>
+							</li>
+							
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="icon-cog5"></i>
+									<span>Configuración</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="icon-switch2"></i>
+									<span>Cerrar Sesión</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Main -->
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Menu</div> <i class="icon-menu" title="Menu"></i></li>
+						
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-home4"></i> <span>Inicio</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Inicio">
+								<li class="nav-item"><a href="#" class="nav-link ">Grilla de Adicionales</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Administracion de Usuarios</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Grilla de Reservas</a></li>
+								
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-cog2"></i> <span>Administrativo</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Administrativo">
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Datos Administrativos</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Feriados</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Situaciones</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Categorias</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Vehiculos</a></li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Adicionales</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Adicionales por Sede</a></li>
+										
+									</ul>
+								</li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Dashboard</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Ocupacion</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Tiempo</a></li>
+									</ul>
+								</li>
+								
+								
+								
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-wallet"></i> <span>Comercial</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Comercial">
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Reservas</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Listado de Reservas</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Alta de Reservas</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Clientes</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Listado de Clientes</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Nuevo Cliente</a></li>
+									</ul>
+								</li>
+								
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Cotizaciones</a>
+									<ul class="nav nav-group-sub">
+										<li class="nav-item"><a href="#" class="nav-link">Listado de Cotizaciones</a></li>
+										<li class="nav-item"><a href="#" class="nav-link">Generar Cotizacion</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-submenu">
+									<a href="#" class="nav-link">Tarifas</a>
+									<ul class="nav nav-group-sub">
+										
+										<li class="nav-item nav-item-submenu">
+											<a href="#" class="nav-link"> Temporadas</a>
+											<ul class="nav nav-group-sub">
+												<li class="nav-item"><a href="#" class="nav-link"> Nueva Temporada</a></li>
+												<li class="nav-item"><a href="#" class="nav-link"> Asignar Temporada</a></li>
+											</ul>
+										</li>
+										<li class="nav-item"><a href="#" class="nav-link"> Tarifas Alquileres</a></li>
+										<li class="nav-item"><a href="#" class="nav-link"> Aeropuertos</a></li>
+										<li class="nav-item"><a href="#" class="nav-link"> Dropoff</a></li>
+										
+									</ul>
+								</li>
+								
+								<li class="nav-item"><a href="#" class="nav-link">Encuestas</a></li>
+								
+							</ul>
+						</li>
+						
+						
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-car"></i> <span>Operaciones</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Operaciones">
+								<li class="nav-item"><a href="#" class="nav-link">Impresion de Contratos</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Entrega y Devolucion</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Nota del Auto</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Listado de Multas</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Listado del Proximo Service</a></li>
+								
+							</ul>
+						</li>
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">MPS ®2020</div> </li>
+
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">RateGain</span> </h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="d-flex justify-content-center">
+							<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
+								<i class="icon-user-plus text-pink-300" title="Nuevo Cliente"></i>
+								<span></span>
+							</a>
+							<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
+								<i class="icon-file-plus2 text-pink-300" title="Nueva Reserva"></i>
+								<span></span>
+							</a>
+							<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
+								<i class="icon-cash3 text-pink-300" title="Cotización"></i>
+								<span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<div class="breadcrumb">
+							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Inicio</a>
+							<a href="#" class="breadcrumb-item"><span class="breadcrumb-item ">Comercial</span></a>
+								
+							<span class="breadcrumb-item active">RateGain</span>
+						</div>
+
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							
+
+							<div class="breadcrumb-elements-item dropdown p-0">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+			<div class="row">
+				<div class="col-md-6 text-left mb-3 py-2">
+					
+						
+					<a href="#" data-popup="tooltip"  title data-placement="left" data-original-title="Los cambios que realices en esta pantalla se vera´n reflejados recién en el siguiente reporte"><i class="icon-cog text-slate-600" style="font-size:3em;" ></i>
+									
+								</a>
+					
+				</div>
+				
+				<div class=" col-md-6 text-right mb-3 py-2">
+					
+						
+					<h4>Fecha del Reporte: <span class="badge bg-primary  badge-icon">20/08/2020</span> </h4>
+					
+				</div>
+				</div>
+				
+				
+				<div class="row">
+				<div class="col-md-12">
+						<div class="card">
+							
+
+							<div class="card-body">
+								<ul class="nav nav-tabs nav-tabs-highlight nav-justified">
+									<li class="nav-item" ><a href="#highlighted-justified-tab1" class="nav-link active" data-toggle="tab" ><img src="../../../../global_assets/images/rentals.png"/></a></li>
+									<li class="nav-item"><a href="#highlighted-justified-tab2" class="nav-link" data-toggle="tab"><img src="../../../../global_assets/images/rentcars.png"/></a></li>
+									<li class="nav-item"><a href="#highlighted-justified-tab2" class="nav-link" data-toggle="tab"><img src="../../../../global_assets/images/expedia.png"/></a></li>
+									<li class="nav-item"><a href="#highlighted-justified-tab2" class="nav-link" data-toggle="tab"><button type="button" class="btn btn-outline bg-slate-600 text-slate-600 border-slate-600 legitRipple " data-toggle="modal" data-target="#descarga"><b><i class="icon-chevron-right"></i></b> siguiente</button>&nbsp;</a></li>
+									
+								</ul>
+
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="highlighted-justified-tab1">
+									
+										<div class="text-left mb-3 ">
+										<div class="row">
+										<div class="col-md-5">	
+										<div class="form-group row" style="margin-bottom:0px;">
+									<label class="col-form-label col-lg-4 font-weight-bold">Locación</label>
+									<div class="col-lg-8">
+										<select class="form-control">
+			                                <option value="opt1" >BARILOCHE</option>
+			                                <option value="opt2">SALTA</option>
+			                                <option value="opt3">NORDELTA</option>
+			                               
+			                            </select>
+									</div>
+								</div>
+								<div class="form-group row" style="margin-bottom:0px;">
+									<label class="col-form-label col-lg-4 font-weight-bold">Categoría</label>
+									<div class="col-lg-8">
+										<select class="form-control">
+			                                <option value="opt1">COMPACTO</option>
+			                                <option value="opt2">ECONOMICO</option>
+			                                <option value="opt3">INTERMEDIO</option>
+			                               
+			                            </select>
+									</div>
+								</div>
+								<div class="form-group row" style="margin-bottom:0px;">
+									<label class="col-form-label col-lg-4 font-weight-bold">Kilometraje</label>
+									<div class="col-lg-8">
+										<input type="text" class="form-control" readonly="" value="Libre">
+									</div>
+								</div>
+								<div class="form-group row" style="margin-bottom:0px;">
+									<label class="col-form-label col-lg-4 font-weight-bold">Lenght</label>
+									<div class="col-lg-8">
+										<input type="text" class="form-control" readonly="" value="1 a 2 días">
+									</div>
+								</div>
+								<!-- <div class="form-group row" style="margin-bottom:0px;"> -->
+									<!-- <label class="col-form-label col-lg-4 font-weight-bold">Fecha Reporte</label> -->
+									<!-- <div class="col-lg-8"> -->
+										<!-- <input type="text" class="form-control" readonly="" value="20/08/2020"> -->
+									<!-- </div> -->
+								<!-- </div> -->
+								</div>
+								
+		<div class="col-md-7">	
+	
+									<div class="col-md-12">	
+								
+								<button type="button" class="btn btn-outline bg-slate-600 text-slate-600 border-slate-600 legitRipple " data-toggle="modal" data-target="#descarga"><b><i class="icon-chevron-right"></i></b> siguiente</button>
+								</div>
+								<div class="col-md-12" style="margin-top: 5px;">	
+								
+								<button type="button" class="btn btn-outline bg-slate-600 text-slate-600 border-slate-600 legitRipple " data-toggle="modal" data-target="#descarga"><b><i class="icon-chevron-right"></i></b> siguiente</button>
+								</div>
+								<div class="col-md-12" style="margin-top: 5px;">	
+								
+								
+								
+							
+								
+
+								<button type="button" class="btn bg-primary-400 btn-sm btn-icon rounded-round legitRipple" data-toggle="collapse" data-target="#collapse-button-expanded" aria-expanded="true"><i class="icon-stats-growth"></i>
+									
+								</button>
+							
+
+							<div class="collapsing " id="collapse-button-expanded">
+								<div class="mt-3">
+										<div class="chart-container">
+							<div class="chart has-fixed-height" id="rategain"></div>
+								</div>
+							</div>
+					
+								
+								</div>
+
+
+
+								</div>
+
+	
+								
+	</div>
+		                    	
+</div>
+
+
+	
+		
+
+							<div class="table-responsive">
+								
+
+							
+										<table class="table table-hover table-striped table-bordered table-lg text-center">
+											<h4> <span class="badge bg-primary  badge-icon">TEMPORADA ALTA</span> </h4>
+						<thead>
+							<tr>
+								
+								
+								<th style="font-size: 0.9em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static">
+											
+										</label>
+									</div></th>
+								<th style="font-size: 0.9em; ">Lead</br> Time</th>
+								<th style="font-size: 0.9em; ">RAC</br>FW</th>
+								<th class="alpha-green " style="font-size: 0.9em; "  data-popup="tooltip"  title data-placement="left" data-original-title="Explicación">MIN</th>
+								<th class="alpha-green" style="font-size: 0.9em; " data-popup="tooltip" data-placement="right" title data-original-title="Explicación">%</br> MIN</th>
+								<th class="alpha-orange" style="font-size: 0.9em;" data-popup="tooltip"  title data-placement="left" data-original-title="Explicación">AVG</th>
+								<th class="alpha-orange" style="font-size: 0.9em;" data-popup="tooltip" data-placement="right" title data-original-title="Explicación">% </br>AVG</th>
+								<th style="font-size: 0.9em;">HERTZ</th>
+								<th style="font-size: 0.9em;">AVIS</th>
+								<th style="font-size: 0.9em;">AA</th>
+								<th style="font-size: 0.9em;">AB</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							
+							<tr>
+								
+								
+								
+								<td style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static" checked="">
+										</label>
+									</div></td>
+								<td style="font-size: 0.85em;padding: .75rem 0.3rem;" data-popup="tooltip"  title data-placement="left" data-original-title="70% de Ocupación">1 <i class="icon-info22 text-slate-300"></i></td>
+									<td style="font-size: 0.85em;" >$2000</td>
+								<td class="alpha-green" style="font-size: 0.85em;" >$1050</td>
+								<td class="alpha-green " style="font-size: 0.85em;" >90%</td>
+								<td class="alpha-orange " style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange " style="font-size: 0.85em;" >67%</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td  style="font-size: 0.85em;" >$1200</td>
+								<td  style="font-size: 0.85em;" >$1200</td>
+							</tr>
+							
+							
+							<tr>
+								
+								
+								
+								<td class="text-muted" style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static"  >
+										</label>
+									</div></td>
+							<td style="font-size: 0.85em;padding: .75rem 0.3rem;" data-popup="tooltip"  title data-placement="left" data-original-title="70% de Ocupación">3 <i class="icon-info22 text-slate-300"></i></td>
+									<td class="text-muted" style="font-size: 0.85em;" >$2000</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >$1050</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >90%</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >67%</td>
+								<td  class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+							</tr>
+							<tr>
+								
+								
+								
+								<td class="text-muted" style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static" >
+										</label>
+									</div></td>
+								<td style="font-size: 0.85em;padding: .75rem 0.3rem;" data-popup="tooltip"  title data-placement="left" data-original-title="20% de Ocupación">7 <i class="icon-info22 text-slate-300"></i></td>
+									<td class="text-muted" style="font-size: 0.85em;" >$850</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >-43%</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >-19%</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+							</tr>
+							
+							<tr>
+								
+								
+								
+								<td class="text-muted" style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static" >
+										</label>
+									</div></td>
+								<td style="font-size: 0.85em;padding: .75rem 0.3rem;" data-popup="tooltip"  title data-placement="left" data-original-title="20% de Ocupación">60 <i class="icon-info22 text-slate-300"></i></td>
+									<td class="text-muted" style="font-size: 0.85em;" >$1100</td>
+								<td  class="alpha-green text-muted" style="font-size: 0.85em;" >$1050</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >29%</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >5%</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+							</tr>
+							<tr>
+								
+								
+								
+								<td style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static" checked="">
+										</label>
+									</div></td>
+								<td style="font-size: 0.85em;padding: .75rem 0.3rem;" data-popup="tooltip"  title data-placement="left" data-original-title="40% de Ocupación">30 <i class="icon-info22 text-slate-300"></i></td>
+									<td style="font-size: 0.85em;" >$1100</td>
+								<td class="alpha-green" style="font-size: 0.85em;" >$1050</td>
+								<td class="alpha-green" style="font-size: 0.85em;" >29%</td>
+								<td class="alpha-orange" style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange" style="font-size: 0.85em;" >-21%</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+							</tr>
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+						</tbody>
+					</table>
+					
+								
+									
+								</div>
+							
+			<div class="row" style="margin-top: 20px;">
+			<div class="col-md-2 ">	
+								
+									</div>
+				<div class="col-md-3 ">	
+								<span class="badge badge-flat border-primary text-primary-600 badge-icon">60%</span> <a class="btn bg-green legitRipple" href="#">Aplicar MINIMO</a>
+									</div>
+									<div class="col-md-3 ">	
+			    			<span class="badge badge-flat border-primary text-primary-600 badge-icon">80%</span> <a class="btn bg-orange-300 legitRipple" href="#">Aplicar PROMEDIO</a>
+							</div>
+							<div class="col-md-3 ">	
+							<div class="input-group">
+											<input type="text" class="form-control" > <span style="padding-top:10px;">%</span>
+											<span class="input-group-append">
+												 <a class="btn bg-grey legitRipple" href="#">Aplicar MANUALMENTE</a>
+											</span>
+										</div>
+						
+
+							</div>
+							
+								</div>
+			
+							
+						<div class="table-responsive" style="margin-top:30px;">
+								
+
+							
+										<table class="table table-hover table-striped table-bordered table-lg text-center">
+											<h4> <span class="badge bg-purple  badge-icon">TEMPORADA BAJA</span> </h4>
+						<thead>
+							<tr>
+								
+								
+								<th style="font-size: 0.9em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static">
+											
+										</label>
+									</div></th>
+								<th style="font-size: 0.9em; ">Lead</br> Time</th>
+								<th style="font-size: 0.9em; ">RAC</br>FW</th>
+								<th class="alpha-green " style="font-size: 0.9em; "  data-popup="tooltip"  title data-placement="left" data-original-title="Explicación">MIN</th>
+								<th class="alpha-green" style="font-size: 0.9em; " data-popup="tooltip" data-placement="right" title data-original-title="Explicación">%</br> MIN</th>
+								<th class="alpha-orange" style="font-size: 0.9em;" data-popup="tooltip"  title data-placement="left" data-original-title="Explicación">AVG</th>
+								<th class="alpha-orange" style="font-size: 0.9em;" data-popup="tooltip" data-placement="right" title data-original-title="Explicación">% </br>AVG</th>
+								<th style="font-size: 0.9em;">HERTZ</th>
+								<th style="font-size: 0.9em;">AVIS</th>
+								<th style="font-size: 0.9em;">AA</th>
+								<th style="font-size: 0.9em;">AB</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							
+							<tr>
+								
+								
+								
+								<td style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static" checked="">
+										</label>
+									</div></td>
+								<td style="font-size: 0.85em;padding: .75rem 0.3rem;" >1 70% Ocup.</td>
+									<td style="font-size: 0.85em;" >$2000</td>
+								<td class="alpha-green" style="font-size: 0.85em;" >$1050</td>
+								<td class="alpha-green " style="font-size: 0.85em;" >90%</td>
+								<td class="alpha-orange " style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange " style="font-size: 0.85em;" >67%</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td style="font-size: 0.85em;" >$1200</td>
+								<td  style="font-size: 0.85em;" >$1200</td>
+								<td  style="font-size: 0.85em;" >$1200</td>
+							</tr>
+							
+							
+							<tr>
+								
+								
+								
+								<td class="text-muted" style="font-size: 0.85em; "><div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input position-static"  >
+										</label>
+									</div></td>
+								<td class="text-muted" style="font-size: 0.85em;padding: .75rem 0.3rem;" >3 70% Ocup.</td>
+									<td class="text-muted" style="font-size: 0.85em;" >$2000</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >$1050</td>
+								<td class="alpha-green text-muted" style="font-size: 0.85em;" >90%</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >$1000</td>
+								<td class="alpha-orange text-muted" style="font-size: 0.85em;" >67%</td>
+								<td  class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+								<td class="text-muted" style="font-size: 0.85em;" >$1200</td>
+							</tr>
+						
+							
+						
+							
+							
+							
+							
+							
+							
+						
+						</tbody>
+					</table>
+					
+								
+									
+								</div>
+							
+			<div class="row" style="margin-top: 20px;">
+			<div class="col-md-2 ">	
+								
+									</div>
+				<div class="col-md-3 ">	
+								<span class="badge badge-flat border-primary text-primary-600 badge-icon">60%</span> <a class="btn bg-green legitRipple" href="#">Aplicar MINIMO</a>
+									</div>
+									<div class="col-md-3 ">	
+			    			<span class="badge badge-flat border-primary text-primary-600 badge-icon">80%</span> <a class="btn bg-orange-300 legitRipple" href="#">Aplicar PROMEDIO</a>
+							</div>
+							<div class="col-md-3 ">	
+							<div class="input-group">
+											<input type="text" class="form-control" > <span style="padding-top:10px;">%</span>
+											<span class="input-group-append">
+												 <a class="btn bg-grey legitRipple" href="#">Aplicar MANUALMENTE</a>
+											</span>
+										</div>
+						
+
+							</div>
+							
+								</div>	
+								
+								
+			
+			
+			
+			
+			
+			
+									</div>
+
+									
+
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				
+				
+				
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					
+					
+						</div>
+						
+						
+						
+			
+			<!-- /content area -->
+ 
+		<!-- Primary modal -->
+				<div id="modal_programar" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-header bg-light">
+								<h6 class="modal-title">Comparación de precios vs la competencia</h6>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								
+							
+							
+								
+								
+					
+
+					<div class="col-md-12">
+						
+						</div>
+				
+				
+
+								
+											
+								
+											
+
+						<!-- <div class="row"> -->
+								<!-- <div class="col-md-12 text-right mb-3 py-2"> -->
+									<!-- <button type="button" class="btn btn-success btn-sm legitRipple "> Guardar</button>&nbsp; -->
+		                    	<!-- <button type="button" class="btn btn-danger btn-sm legitRipple"> Cancelar</button> -->
+									<!-- </div> -->
+									<!-- </div> -->
+
+							
+						</div>
+							</div>
+
+							
+						</div>
+					</div>
+				</div>
+				
+					
+					
+						
+				
+				<!-- /primary modal -->	
+			
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+</html>
